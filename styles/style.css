@@ -3,10 +3,14 @@
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
+  text-decoration: none;
+	list-style-type:none;
 }
 
-
-
+body {
+	margin: none;
+	padding: none;
+}
 
 
 
@@ -16,7 +20,9 @@
 :root {
 	/* startje */
 	--color-text:#111;
+	--secondary-color-text:#eee;
 	--color-background:#eee;
+	--secondary-color-background:#111;
 }
 
 
@@ -28,4 +34,7 @@
 /****************/
 
 /* jouw code */
-
+footer {
+background-color: var(--secondary-color-background);
+color: var(--secondary-color-text);
+}
