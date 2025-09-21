@@ -177,10 +177,16 @@ Antwoorden:
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+Mijn vragen/problemen
+1. Ik kom er met de header niet uit. Grid geprobeerd, niet gelukt met flexbox verder gekomen maar positioneren van iconen lukt niet goed en het uitklap menu.
+2. De validator geeft aan 'Start tag “body” seen but an element of the same type was already open.' Er is echter geen tweede body tag, wat houdt dit in?
+3. Er moet een lijn tussen img en onze winkels zijn maar dit lukt mij niet om toe te voegen. Nummering van child vind ik onduidelijk.
+4. Hoe kun je een checkbox selecteren om te stijlen? input type=["checkbox"] werkt niet, ook andere dingen geprobeerd.
+5. Hoe kan ik de witruimte weghalen voor de link 'privacybeleid'?
+6. Hoe kan ik laatste img in footer selecteren? last-child of nth type werkt niet
+7. Is het erg als ik soortgelijke kleuren kies en niet die met dezelfde hexcode? Kan de hexcodes niet vinden bij het inspecteren. 
+8. Moeten alle kleuren in de root of alleen de meest gebruikte? Fonts?
+9. Zijn alt teksten nodig voor svg's? 
 
 </details>
 
@@ -279,5 +285,6 @@ Lastig
   3. HTML uitleg figure caption https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption
   4. HTML uitleg svg opslaan Ivo 
   5. HTML uitleg details and summary https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+  6. HTML Twee classes voor 1 tag kan https://www.w3schools.com/html/html_classes.asp
 
 </details>

@@ -1,40 +1,392 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
   text-decoration: none;
-	list-style-type:none;
+  list-style-type: none;
+  font-family: Helvetica, Arial, sans-serif;
 }
-
-body {
-	margin: none;
-	padding: none;
-}
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--secondary-color-text:#eee;
-	--color-background:#eee;
-	--secondary-color-background:#111;
+  /* startje */
+  --color-text: #111;
+  --secondary-color-text: #eee;
+  --color-background: #eee;
+  --secondary-color-background: #111;
+}
+
+
+/****************/
+/* HEADER */
+/****************/
+
+#actie {
+  background-color: var(--secondary-color-background);
+  color: var(--secondary-color-text);
+  font-size: 0.75em;
+  text-decoration: underline;
+  font-weight: 200;
+  padding: 0.75em;
+}
+
+/* Voor iconen*/
+header svg {
+  width: 1.5em;
+}
+
+header a:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+header a {
+  color: var(--color-text);
+}
+
+/* Om navigatie op een rij te krijgen */
+header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Om 2de nav te positioneren */
+header ul:last-child {
+  justify-content: space-around;
+}
+
+/* Om iconen te positioneren, klopt niet!! */
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Om logo te positioneren */
+ul img:first-child {
+  width: 8em;
+}
+
+/* Header lijn */
+header ul:nth-child(1) {
+  border-bottom: solid;
+  border-color: grey;
+  border-width: 0.05em;
+  padding-bottom: 0.5em;
+}
+
+header ul:nth-child(2) {
+  padding-top: 1em;
 }
 
 
 
 
 
+
 /****************/
-/* JOUW STYLING */
+/* FOOTER */
 /****************/
 
-/* jouw code */
 footer {
-background-color: var(--secondary-color-background);
-color: var(--secondary-color-text);
+  background-color: var(--secondary-color-background);
+  color: var(--secondary-color-text);
+ padding-left: 2em;
+}
+
+footer h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+
+
+footer a {
+  color: var(--secondary-color-text);
+  line-height: 2.8em;
+}
+
+footer svg {
+  width: 1.5em;
+  margin-right: 1em;
+}
+
+
+footer a:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer section ul:first-child {
+  margin-top: 2em;
+}
+
+footer section:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer section:nth-child(2) a {
+  text-decoration: underline;
+  padding-right: 1em;
+}
+
+footer nav img {
+  width: 4em;
+  display: block;
+  margin-top: 2em;
+}
+
+/* Hoe laatste afbeelding uit footer selecteren om van groote te veranderen? */
+
+
+
+
+
+/****************/
+/* MAIN          */
+/****************/
+
+/* Lijn en achtergrond
+^^ toevoegen lijn en margin voor onze winkels? */
+
+main section {
+  border-bottom: solid;
+  padding-bottom: 2.5em;
+}
+
+/* Moet 1 zijn maar dan klopt het niet?? */
+
+
+#geleVlak {
+  background-color: rgb(250, 229, 164);
+  font-weight: 200;
+}
+
+main section:last-of-type {
+  background-color: #f1e9df;
+}
+
+.grijsVlak {
+  background-color: #f1f1f1;
+}
+
+
+/* Gecentreerde vlakken */
+
+.centered,
+#imgGrid h2 {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.centered h1,
+h2 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.centered p {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+
+
+
+/* Links uitgelijnde vlakken*/
+
+.leftAligned h2 {
+  padding-top: 2em;
+}
+
+.leftAligned p {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.leftAligned a {
+  margin-left: 2em;
+}
+
+.leftAligned p:last-of-type {
+  font-size: 1em;
+}
+
+
+
+
+
+/* Typografie */
+
+h1,
+#imgGrid h2,
+.leftAligned h2:nth-last-child(2) {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.15em;
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 500;
+}
+
+h2 {
+  line-height: 1.6em;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+#imgGrid h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.15em;
+  margin-bottom: 2em;
+}
+
+main section p:first-of-type {
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.leftAligned p {
+  font-weight: 200;
+}
+
+.leftAligned h2:nth-last-child(2) {
+  font-size: 2em;
+}
+
+
+
+
+/* Afbeeldingen */
+
+main section img:nth-child(2) {
+  width: 10em;
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+}
+
+
+
+
+
+/* eerst figcap fixen? position voor img en cap */
+#imgGrid img {
+  display: grid;
+  width: 100%;
+}
+
+
+
+
+
+/* Video */
+video {
+  width: 25em;
+}
+
+
+
+/* Button en link */
+
+.linkStyle,
+.buttonStyle {
+  background-color: var(--secondary-color-background);
+  color: var(--secondary-color-text);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  border-radius: 3em;
+}
+
+.buttonStyle {
+  width: 12em;
+  border: none;
+}
+
+
+
+
+
+/* Aanmeldformulier */
+
+form {
+  display: grid;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+form input {
+  padding: 1em;
+  border: solid 0.05em;
+  border-color: rgb(180, 179, 179);
+  border-radius: 0.5em;
+}
+
+/* Hoe checkbox selecteren om te stijlen? */
+
+form label {
+  font-weight: 200;
+  color: rgb(72, 71, 71);
+  font-size: 0.8em;
+}
+
+/* Hoe witruimte weghalen? margin padding werkt niet */
+form a {
+  text-decoration: underline;
+  color: rgb(72, 71, 71);
+}
+
+div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+
+
+
+/* overig */
+
+.centered ul {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  gap: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.centered ul img {
+  width: 13em;
+  margin-bottom: 1em;
+}
+
+.centered ul p {
+  text-align: left;
+  margin: 0;
 }
