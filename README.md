@@ -166,13 +166,13 @@ Antwoorden:
   Goed
   1. Voor mijn gevoel heb ik niet teveel classes of id's gebruikt dus dat gaat voor mijn gevoel wel goed. Ik kijk eerst echt of een element op een andere manier geselecteerd kunnen worden.
 
-  2. Wat verder denk ik ook goed gaat is het indelen van mijn css. Toen ik begon was het heel slorig en stonden sommige dingen dubbel maar dat heb ik nu allemaal georganiseerd waardoor ik een beter overzicht heb. 
+  2. Wat verder denk ik ook goed gaat is het indelen van mijn css. Toen ik begon was het heel slordig en stonden sommige dingen dubbel maar dat heb ik nu allemaal georganiseerd waardoor ik een beter overzicht heb. 
 
 <img src="readme-images/v2_css.png" width="375px" alt="Indeling css">
 
 
   Lastig
-  1. Het positioneren van alle elementen in de header gaat ook lastig. Ik heb dit eerst met grid geprobeerd maar kwam er niet uit. Met flexbox ben ik een stuk verder gekomen maar de iconen heb ik nog niet allemaal op de juiste plaats kunnen krijgen. Daarnaast heb ik ook nog geen idee hoe ik het hamburger menu moet oplossen.
+  1. Het positioneren van de elementen in de header gaat ook lastig. Ik heb dit eerst met grid geprobeerd maar kwam er niet uit. Met flexbox ben ik een stuk verder gekomen maar de iconen heb ik nog niet allemaal op de juiste plaats kunnen krijgen. Daarnaast heb ik ook nog geen idee hoe ik het hamburger menu moet oplossen.
 <img src="readme-images/v2_header.png" width="375px" alt="Weergave van header in browser">
 
   2. Het selecteren van de juiste selector. Ik merk dat ik nog erg door de war raak met nth-child en nth-of-type. Nu probeer ik steeds beide om te kijken of het lukt.
