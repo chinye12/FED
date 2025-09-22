@@ -204,7 +204,15 @@ Mijn vragen/problemen
 
 </details>
 
-
+1.
+2.
+3.Inmiddels gelukt door de img te selecteren binnen de class.
+4.
+5.
+6. Inmiddels gelukt met last-child
+7.
+8.
+9.
 
 
 
@@ -300,5 +308,7 @@ Lastig
   4. HTML uitleg svg opslaan Ivo 
   5. HTML uitleg details and summary https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
   6. HTML Twee classes voor 1 tag kan https://www.w3schools.com/html/html_classes.asp
+  7. CSS instructie tekst positioneren op afbeelding https://www.youtube.com/watch?v=z-naBVXTi6g
+
 
 </details>

@@ -77,7 +77,7 @@ ul img:first-child {
   width: 8em;
 }
 
-/* Header lijn */
+/* Header lijn */ 
 header ul:nth-child(1) {
   border-bottom: solid;
   border-color: grey;
@@ -88,7 +88,6 @@ header ul:nth-child(1) {
 header ul:nth-child(2) {
   padding-top: 1em;
 }
-
 
 
 
@@ -150,8 +149,10 @@ footer nav img {
   margin-top: 2em;
 }
 
-/* Hoe laatste afbeelding uit footer selecteren om van groote te veranderen? */
-
+footer img:last-child{
+  width: 20em;
+  padding-bottom: 5em;
+}
 
 
 
@@ -168,9 +169,6 @@ main section {
   padding-bottom: 2.5em;
 }
 
-/* Moet 1 zijn maar dan klopt het niet?? */
-
-
 #geleVlak {
   background-color: rgb(250, 229, 164);
   font-weight: 200;
@@ -183,6 +181,20 @@ main section:last-of-type {
 .grijsVlak {
   background-color: #f1f1f1;
 }
+
+.grijsVlak li {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: solid;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ^^ moet denk ik grid zijn?? */
+
 
 
 /* Gecentreerde vlakken */
@@ -211,11 +223,13 @@ h2 {
 
 .leftAligned h2 {
   padding-top: 2em;
+
 }
 
 .leftAligned p {
   padding-left: 2em;
   padding-right: 2em;
+  padding-top: 1em;
 }
 
 .leftAligned a {
@@ -224,6 +238,10 @@ h2 {
 
 .leftAligned p:last-of-type {
   font-size: 1em;
+}
+
+.leftAligned img {
+  border-bottom: solid;
 }
 
 
@@ -262,7 +280,7 @@ p {
 }
 
 main section p:first-of-type {
-  font-size: 0.9em;
+  font-size: 0.8em;
   line-height: 1.7em;
 }
 
@@ -274,10 +292,17 @@ main section p:first-of-type {
   font-size: 2em;
 }
 
+#special {
+  font-family: 'Times New Roman', Times, serif
+}
+
 
 
 
 /* Afbeeldingen */
+main img {
+  width: 100%;
+}
 
 main section img:nth-child(2) {
   width: 10em;
@@ -285,23 +310,15 @@ main section img:nth-child(2) {
   margin-bottom: 2.5em;
 }
 
-
-
-
-
-/* eerst figcap fixen? position voor img en cap */
-#imgGrid img {
-  display: grid;
-  width: 100%;
+.grijsVlak svg {
+  width: 1em;
 }
-
-
 
 
 
 /* Video */
 video {
-  width: 25em;
+  width: 100%;
 }
 
 
@@ -368,6 +385,22 @@ div {
 
 
 /* overig */
+
+figcaption {
+  color: var(--secondary-color-text);
+  position: relative;
+  top: -2.5em;
+  display: flex;
+  justify-content: center;
+}
+
+#imgGrid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.1em;
+border-top: solid;
+margin-top: 1em;
+}
 
 .centered ul {
   display: flex;
