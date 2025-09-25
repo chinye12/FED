@@ -204,16 +204,31 @@ Mijn vragen/problemen
 
 </details>
 
-1.
-2.
-3.Inmiddels gelukt door de img te selecteren binnen de class.
-4.
-5.
-6. Inmiddels gelukt met last-child
-7.
-8.
-9.
+1. Even kijken naar de code voor het hamburger menu als voorbeeld staat. Summary details gaat niet mogelijk zijn. !
+2. Dit komt doordat bijv. img een / voor het haakje heeft staan, dit mag verwijderd worden en dan zal de melding ook niet meer voorkomen. (Done)
+3.Inmiddels gelukt door de img te selecteren binnen de class. (Done)
+4. Je kunt niet alles stijlen van een checkbox. Transform scale (2) kan als oplossing. !lukt niet
+5. We zijn erachter komen dat er wel witruimte is voor de .leftAligned a (gebruikt voor de footer) a.d.v. de developertools. Als dit weggehaald wordt, dan klopt het. Oplossig footer .leftaligned a. (Done)
+6. Inmiddels gelukt met last-child. (Done)
+7. Nee, dat is geen probleem. (Done)
+8. Alle kleuren in de root, fonts kunnen zelf ook. (Done)
+9. Om het toegankelijker te maken kan een span aria label toegevoegd te worden. De alternatieve tekst moet in dit geval bijv. de functie van een icoon beschrijven zoals wishlisht voor een hartje of als het een afbeelding is net als met img een beschrijvende tekst zijn.
 
+
+Overige punten/to do's die besproken zijn:
+1. Header in body. (Done)
+2. In footer geen sections maar a.d.v. ul stijlen en positioneren. (Done)
+3. List-style-type gebruiken voor de vinkjes door eigen iconen toe te voegen. 
+4. Classes toevoegen voor de verschillende lettertypes. (Done)
+5. Formulier toevoegen in read.me van toegankelijkheidstest. 
+
+
+Surface plane toevoegingen:
+
+1. Bovenin header banner teksten laten veranderen.
+2. Video niet op autoloop maar met button etc.
+3. Dark mode uitgebreider uitvoeren.
+4. ::after toepasssen voor Frequented asked questions uitklapgedeelte. 
 
 
 ## Toegankelijkheidstest 2/2 (week 4)
@@ -309,6 +324,8 @@ Lastig
   5. HTML uitleg details and summary https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
   6. HTML Twee classes voor 1 tag kan https://www.w3schools.com/html/html_classes.asp
   7. CSS instructie tekst positioneren op afbeelding https://www.youtube.com/watch?v=z-naBVXTi6g
+  8. CSS code voor weghalen van blauwe kleur van links https://stackoverflow.com/questions/6722467/how-do-i-remove-the-default-link-color-of-the-html-hyperlink-a-tag
+  9. CSS scrollbar onzichtbaar maken https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
 
 
 </details>

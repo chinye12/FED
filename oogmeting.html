@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="jouw naam" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" >
+    <meta name="author" content="jouw naam" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
 
     <title>Ace & Tate</title>
 
-    <link href="styles/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link href="styles/style.css" rel="stylesheet" >
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" >
   </head>
-  <header></header>
   <body>
+    <header></header>
     <main>
-      <section class="centered grijsVlak" >
-        <h1>Boek een oogmeting bij een van onze opticiens</h1>
-        <p>
+      <section class="centered grijsVlak">
+        <h1 id="titleTwo">Boek een oogmeting bij een van onze opticiens</h1>
+        <p class="thinFont">
           Is een oogmeting echt nodig? Jazeker! Ook als je denkt dat je ogen
           prima zijn, is het belangrijk om ze elke twee jaar te laten checken.
           Bij onze ervaren opticiens ben je in goede handen - met de modernste
@@ -24,12 +24,10 @@
         </p>
         <a class="linkStyle" href="#">Boek nu</a>
       </section>
-      <section>
-        <video src="video/oogmeting.webm"></video>
-        </section>
-        <section>
+      <video src="video/oogmeting.webm"></video>
+      <section class="noWhiteSpace">
         <h2 class="centered">Het is tijd voor een oogmeting als:</h2>
-        <ul class="grijsVlak">
+        <ul id="schema" class="grijsVlak thinFont">
           <li>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,15 +120,18 @@
           </li>
         </ul>
       </section>
-      <section class="centered">
-        <h2>Wat gebeurt er tijdens een oogmeting?</h2>
-        <p>
+      <section>
+        <h2 class="centered">Wat gebeurt er tijdens een oogmeting?</h2>
+        <p class="centered">
           Onze opticien stelt je eerst enkele screeningsvragen, waarna zij beide
           ogen zullen opmeten om je sterkte te bepalen.
         </p>
-        <ul>
+        <ul id="carousel">
           <li>
-            <img src="images/oogmeting/oogmeting1.jpeg" alt="" />
+            <img
+              src="images/oogmeting/oogmeting1.jpeg"
+              alt="Een man die achter een autorefractormeter zit"
+            />
             <p>
               Je zult letters van een scherm lezen, kleuren onderscheiden, veel
               knipperen en naar afbeeldingen kijken. Het is een heel ontspannen
@@ -138,14 +139,20 @@
             </p>
           </li>
           <li>
-            <img src="images/oogmeting/oogmeting2.jpeg" alt="" />
+            <img
+              src="images/oogmeting/oogmeting2.jpeg"
+              alt="Een man die een pasbril op heeft"
+            />
             <p>
               Dit alles gebeurt met behulp van de beste apparatuur uit de
               industrie. Best gaaf, toch?
             </p>
           </li>
           <li>
-            <img src="images/oogmeting/oogmeting3.jpeg" alt="" />
+            <img
+              src="images/oogmeting/oogmeting3.jpeg"
+              alt="Een jonge vrouw die een transparante bril met grote glazen op heeft"
+            >
             <p>
               Na je gratis afspraak ontvang je direct je brilrecept en kun je je
               nieuwe bril uitkiezen.
@@ -158,8 +165,11 @@
         <ul>
           <li>
             <details>
-              <summary>Wat is een oogmeting?</summary>
-              <p>
+              <summary>
+                Wat is een oogmeting?
+                <button class="icon"></button>
+              </summary>
+              <p class="thinFont">
                 Een oogmeting is meer dan alleen een check van je zicht – het is
                 een uitgebreid gezondheidsonderzoek van je ogen, waarbij we met
                 de modernste technologie ook kijken naar mogelijke
@@ -168,7 +178,7 @@
                 van een oogmeting is het onderzoeken van veelvoorkomende
                 refractieafwijkingen, zoals:
               </p>
-              <ul>
+              <ul class="leftAligned thinFont listType">
                 <li>Bijziendheid (myopie): Moeite met veraf zien</li>
                 <li>Verziendheid (hyperopie): Moeite met dichtbij zien</li>
                 <li>
@@ -177,7 +187,7 @@
                 </li>
                 <li>Ouderdomsverziendheid</li>
               </ul>
-              <p>
+              <p class="thinFont">
                 Na de meting vertellen we je precies hoeveel correctie je nodig
                 hebt in je glazen. Deze correcties worden uitgedrukt in een
                 reeks getallen: je sterkte.
@@ -186,8 +196,11 @@
           </li>
           <li>
             <details>
-              <summary>Wanneer moet ik een oogmeting laten doen?</summary>
-              <p>
+              <summary>
+                Wanneer moet ik een oogmeting laten doen?
+                <button class="icon"></button>
+              </summary>
+              <p class="thinFont">
                 Ook als je ogen prima aanvoelen, raden we aan om ze elke twee
                 jaar te laten checken. Je ogen veranderen namelijk met de tijd,
                 dus het is belangrijk om te weten hoe het ermee gaat. Heb je
@@ -195,20 +208,19 @@
                 dan zo snel mogelijk een afspraak om de oorzaak te achterhalen.
               </p>
             </details>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1024 1024"><!-- Icon from Element Plus by Element Plus - https://github.com/element-plus/element-plus-icons/blob/main/packages/svg/package.json --><path fill="currentColor" d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64z"/></svg>
           </li>
           <li>
             <details>
               <summary>Hoeveel kost een oogmeting?</summary>
-              <p>Een oogmeting is bij ons helemaal gratis.</p>
+              <p class="thinFont">Een oogmeting is bij ons helemaal gratis.</p>
             </details>
           </li>
           <li>
             <details>
               <summary>Wanneer kan ik een oogmeting boeken?</summary>
-              <p>
+              <p class="thinFont">
                 Je kunt direct
-                <a href="#">hier</a>
+                <a class="thinFont" href="#">hier</a>
                 een oogmeting inplannen bij de dichtstbijzijnde winkel.
               </p>
             </details>
@@ -216,7 +228,7 @@
           <li>
             <details>
               <summary>Hoe lang duurt een oogmeting?</summary>
-              <p>
+              <p class="thinFont">
                 Je afspraak duurt ongeveer 20 minuten (voor zowel enkelvoudige
                 als varifocale glazen). Dus, kom even langs tijdens je
                 lunchpauze.
@@ -226,7 +238,7 @@
           <li>
             <details>
               <summary>Hoe vaak moet ik een oogmeting doen?</summary>
-              <p>
+              <p class="thinFont">
                 We raden aan om iedere twee jaar je ogen te laten testen, zelfs
                 als ze 100% oké voelen. Ogen veranderen met de tijd dus het is
                 belangrijk om dit geregeld te laten controleren.
@@ -236,7 +248,7 @@
           <li>
             <details>
               <summary>Speelt mijn leeftijd een rol?</summary>
-              <p>
+              <p class="thinFont">
                 Na je 40e beginnen je ogen sneller te veranderen. Daarom raden
                 we aan om vanaf die leeftijd vaker langs te komen voor een
                 meting (één keer per jaar, zelfs).
@@ -248,7 +260,7 @@
               <summary>
                 Bieden jullie oogmetingen aan voor contactlezen?
               </summary>
-              <p>
+              <p class="thinFont">
                 Nee, helaas bieden we geen oogmetingen aan voor contactlenzen.
               </p>
             </details>
@@ -256,9 +268,9 @@
           <li>
             <details>
               <summary>Hoe vind ik een opticien bij mij in de buurt?</summary>
-              <p>
+              <p class="thinFont">
                 Dat is heel simpel. Klik op
-                <a href="#">hier</a>
+                <a class="underline" href="#">hier</a>
                 en selecteer je locatie om de dichtstbijzijnde winkel te vinden.
                 Volg de stappen en kies een tijdslot. Je kunt ons ook altijd
                 bellen of gewoon langskomen in de winkel.
@@ -269,20 +281,23 @@
       </section>
       <section class="centered">
         <h2>Klaar om je ogen te laten testen?</h2>
-        <p>Vind een winkel bij jou in de buurt en boek jouw oogmeting.</p>
+        <p class="thinFont">
+          Vind een winkel bij jou in de buurt en boek jouw oogmeting.
+        </p>
         <a class="linkStyle" href="#">Boek een oogmeting</a>
       </section>
-      <section class="leftAligned">
-        <h2>
+      <section>
+        <h2 class="secondFont leftAligned mediumSizeFont">
           Meld je aan voor onze nieuwsbrief voor de laatste Ace & Tate updates.
         </h2>
         <form>
           <input type="text" placeholder="Enter your emailadress" />
           <div>
-            <input type="checkbox" id="checkbox" />
+            <input type="checkbox" id="checkbox" >
             <label for="checkbox"
               >Ik geef toestemming voor de verwerking van mijn persoonlijke
-              gegevens en heb het <a href="#">privacybeleid</a> gelezen*</label
+              gegevens en heb het
+              <a class="underline" href="#">privacybeleid</a> gelezen*</label
             >
           </div>
           <button class="buttonStyle">meld je aan</button>
@@ -294,7 +309,7 @@
       <ul>
         <li>Ma - Vr, 9:00 - 17:00</li>
         <li>
-          <a href="#">
+          <a class="row" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -312,50 +327,48 @@
         </li>
       </ul>
       <nav>
-        <section>
-          <ul>
-            <li>
-              <a href="#">Brillen</a>
-            </li>
-            <li>
-              <a href="#">Zonnebrillen</a>
-            </li>
-            <li>
-              <a href="#">Accessoires</a>
-            </li>
-            <li>
-              <a href="#">Producten</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Leveringsopties</a>
-            </li>
-            <li>
-              <a href="#">Contact opnemen</a>
-            </li>
-            <li>
-              <a href="#">Over ons</a>
-            </li>
-            <li>
-              <a href="#">Verantwoordelijkheid</a>
-            </li>
-            <li>
-              <a href="#">Vacatures</a>
-            </li>
-            <li>
-              <a href="#">Opticiens</a>
-            </li>
-            <li>
-              <a href="#">FAQs</a>
-            </li>
-            <li>
-              <a href="#">Voor bedrijven</a>
-            </li>
-          </ul>
-        </section>
-        <section>
+        <ul>
+          <li>
+            <a href="#">Brillen</a>
+          </li>
+          <li>
+            <a href="#">Zonnebrillen</a>
+          </li>
+          <li>
+            <a href="#">Accessoires</a>
+          </li>
+          <li>
+            <a href="#">Producten</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Leveringsopties</a>
+          </li>
+          <li>
+            <a href="#">Contact opnemen</a>
+          </li>
+          <li>
+            <a href="#">Over ons</a>
+          </li>
+          <li>
+            <a href="#">Verantwoordelijkheid</a>
+          </li>
+          <li>
+            <a href="#">Vacatures</a>
+          </li>
+          <li>
+            <a href="#">Opticiens</a>
+          </li>
+          <li>
+            <a href="#">FAQs</a>
+          </li>
+          <li>
+            <a href="#">Voor bedrijven</a>
+          </li>
+        </ul>
+        <div class="row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -368,41 +381,42 @@
               d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 7.35q3.05-2.8 4.525-5.087T18 10.2q0-2.725-1.737-4.462T12 4T7.738 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35M12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22m0-12"
             />
           </svg>
-          <a href="#">Nederland</a>
-          <a href="#">Dutch</a>
-        </section>
-        <img src="images/algemeen/bcorp.6e4bef5e.svg" alt="" />
-        <section>
-          <ul>
-            <li>
-              <a href="#">toegankelijkheid</a>
-            </li>
-            <li>
-              <a href="#">cookiebeleid</a>
-            </li>
-            <li>
-              <a href="#">colofon</a>
-            </li>
-            <li>
-              <a href="#">privacybeleid</a>
-            </li>
-            <li>
-              <a href="#">algemene voorwaarden</a>
-            </li>
-            <li>
-              <a href="#">website voorwaarden</a>
-            </li>
-            <li>
-              <a href="#">compliance</a>
-            </li>
-          </ul>
-        </section>
+          <a class="underline" href="#">Nederland</a>
+          <a class="underline" href="#">Dutch</a>
+        </div>
+        <img
+          src="images/algemeen/bcorp.6e4bef5e.svg"
+          alt="Certified B Corporation logo in het wit"
+        >
+        <ul>
+          <li>
+            <a href="#">toegankelijkheid</a>
+          </li>
+          <li>
+            <a href="#">cookiebeleid</a>
+          </li>
+          <li>
+            <a href="#">colofon</a>
+          </li>
+          <li>
+            <a href="#">privacybeleid</a>
+          </li>
+          <li>
+            <a href="#">algemene voorwaarden</a>
+          </li>
+          <li>
+            <a href="#">website voorwaarden</a>
+          </li>
+          <li>
+            <a href="#">compliance</a>
+          </li>
+        </ul>
       </nav>
-      <section>
-        <img src="images/algemeen/aceandtate_logo_white.svg" alt="Ace and tate logo in wit" />
-      </section>
-      </footer>
-      <script defer src="scripts/script.js"></script>
-    </body>
-    </html>
-    
+      <img
+        src="images/algemeen/aceandtate_logo_white.svg"
+        alt="Ace and tate logo in wit"
+      >
+    </footer>
+    <script defer src="scripts/script.js"></script>
+  </body>
+</html>
