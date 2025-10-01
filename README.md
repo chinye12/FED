@@ -229,11 +229,12 @@ Overige punten/to do's die besproken zijn:
 
 
 Surface plane toevoegingen:
-
 1. Bovenin header banner teksten laten veranderen.
 2. Video niet op autoloop maar met button etc.
 3. Dark mode uitgebreider uitvoeren.
 4. ::after toepasssen voor Frequented asked questions uitklapgedeelte. 
+5. ? 
+
 </details>
 
 
@@ -245,6 +246,15 @@ Surface plane toevoegingen:
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  * Ik heb dit ingevuld nadat ik de website af heb gemaakt.  
+
+  1. Alle afbeeldingen en de video hebben alternatieve tekst, wat de website van Ace and tate niet heeft. Hierdoor kan de screenreader doorgeven wat er op de afbeelding getoont wordt.
+  2. Alle links met svgs hebben een aria-label, wat de website van Ace and tate niet heeft. Hierdoor kan de screenreader doorgeven wat voor link het nou echt is.
+  3. Er worden geen foutmeldingen aangegeven in het console. 
+  4. Er wordt voor elke sectie gebruik gemaakt van een heading. Hierdoor kan de screenreader het beter lezen.
+  5. Voor de video speelt deze niet gelijk af maar heb je controls waarmee je dit kunt bedienen. Hierdoor heeft de gebruiker meer controle.
+  6. Er is een darkmode. Hierdoor past de weergave van de website zicht aan op de voorkeuren van de gebruiker.
+  7. Er is een laadpagina waardoor de screenreader dat kan aangeven als het aan het laden is. (Ik heb een aria-label hiervoor proberen toe te voegen maar kreeg met de W3 validatie een foutmelding dat dit niet kan bij een div.)
 
 </details>
 
@@ -269,7 +279,7 @@ Goed
 
 
 Lastig
-1. Het laten werken van het hamburgermenu. Ik heb de code uit het voorbeeld gebruikt maar ik krijg in de browser de melding dat area-label = "hidden" niet gebruikt mag worden omdat het niet door screenreaders opgepakt zal worden. Ik heb dat weggehaald en door middel van id's variabele proberen te maken de buttons maar dat werkt niet. 
+1. Het laten werken van het hamburgermenu. Ik heb de code uit het voorbeeld gebruikt maar ik krijg in de browser de melding dat area-label = "hidden" niet gebruikt mag worden omdat het niet door screenreaders opgepakt zal worden. Ik heb dat weggehaald en door middel van id's variabele proberen te maken de buttons maar dat werkt niet. Dit is op dit moment mijn grootste struggle waardoor ik eigenlijk nog niet echt heb gekeken naar de toevoegingen voor suface plane.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -311,19 +321,41 @@ Lastig
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/v5_thema.png" width="375px" alt="Weergave herst thema">
+   <img src="readme-images/v5_uitklap.png" width="375px" alt="Frequent asked questions dat uitklapt en van icoon verandert">
+    <img src="readme-images/v5_imgGrid.png" width="375px" alt="Weergave van Instagram post in een grid">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+1. Ik heb geleerd doe je een carousel kunt maken door middel van css. Dit verliep redelijk goed aangezien ik dit eerst kon oefenen met een opdracht en daarna kon toevoegen in mijn eigen code. 
+  <img src="readme-images/v5_carousel.png" width="375px" alt="Weergave van carousel waarbij je horizontaal kunt scrollen">
 
+2. Wat ik heb geleerd is dat ik het gebruik van een class niet altijd hoef te vermijden. Voor de typografie en achtergronden probeerde ik in eerste instantie geen classes te gebruiken maar hierdoor kon ik niet uitgebreid stijlen en sommige delen überhaupt niet goed selecteren. Na het tweede voorganggesprek ben ik weer opnieuw door al mijn code gelopen en het ik wat meer classes toegevoegd. Hierdoor merkte ik dat mijn website steeds meer op die van Ace and tate begon te lijken en de code duidelijker is. Kort samengevat, heb ik een beter inzicht gekregen in wanneer je classes en nth-child/type kunt gebruiken. 
+
+3. Als laatste heb ik meer over toegankelijkheid geleeerd en hoe je dit kunt toepassen. Zo had ik eerder nooit met een screenreader gewerkt maar door dit te doen kwam ik erachter dat iconen in de header geen betekenis hadden voor screenreaders. Hieruit ontstond mijn vraag of hier ook niet alternatieve tekst voor gebruikt kan worden, uiteindelijk was eruit gekomen dat het toevoegen van een aria-label een mogelijkheid is. Daarbij heb ik ook geleerd hoe je een dark mode maakt en op basis daarvan een thema kunt toevoegen. 
+ <img src="readme-images//v5_arialabel.png" width="375px" alt="Code waarbij toevoeging van aria-label zichtbaar is">
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  1. Bij het maken van het hamburgermenu liep ik heel erg vast. In eerste instantie probeerde ik het door de code uit de opdracht te gebruiken maar kreeg zelf in mijn console te zien dat het gedeelte aria-label hidden niet gebruikt mag worden. Ik ben toen gaan kijken naar hoe ik dit kan oplossen met ChatGPT en andere voorbeelden van een hamburgermenu nagegaan, alleen kwam ik er niet uit. Uiteindelijk heb ik hulp gekregen van Minke en ben ik eerst de code voor het hamburgermenu alleen gaan toevoegen dus zonder de andere elementen uit de header en werkte het menu eindelijk. Daarbij lijkt het wel een iets donkerdere kleur te zijn als het uitklapt, dan ik heb aangegeven. Ik kon niet achterhalen waardoor dit komt.
+   <img src="readme-images/v5_hamburgermenu.png" width="375px" alt="Weergave van alle links binnen het hamburgermenu als het is uitgeklapt">
+
+
+  2. Waar ik verder moeite mee had was het opmaken van de grid van afbeeldingen. Nou had ik snel en makkelijk instructie video's gevonden voor de werking van figcaption en al een idee hoe grid werkt. Alleen het samenbrengen van die twee was lastig omdat ik daar niet echt voorbeelden van kon vinden. 
+
+  3. Wat niet volledig is gelukt, is het nieuwsbriefgedeelte. Een van de invulvelden zou een dropdown moeten zijn met een icoon maar het lukt mij niet om het icoon in het inputveld te krijgen en het dropdown gedeelte te coderen. Nou moet ik zeggen dat dit iets was waar ik nog best last-minute mee aan de slag ging dus ik heb er ook niet heel veel naar gekeken. Als ik meer tijd had, dan had ik dit nog af kunnen maken. 
+  <img src="readme-images/v5_nieuwsbrief.png" width="375px" alt="Weergave van nieuwsbrief gedeelte waarbij alle invulvelden te zien zijn">
+
+  4. Ik ben er heel laat achtergekomen dat het dikgedrukte gedeelte in de footer niet alleen voor stijling is maar een dropdown menu zou zijn om de locatie en taal aan te passen. Dit is mij dan ook niet binnen de tijd gelukt om te coderen. Als ik dit wel had gedaan, dan zou ik het anders stijlen en eventueel positioneren om duidelijker te maken dat dit instellingen zijn.  
+  <img src="readme-images/v5_instellingen.png" width="375px" alt="Weergave van footer met instellingen voor taal en locatie">
+
+
+5. Wat wel gelukt is maar wellicht beter kon is het custom thema dat ik heb gemaakt. Nu vinden er alleen aanpassing plaats op het kleurenpalet maar ik denk dat het ook leuk zou zijn om iconen van blaadjes of bomen toe te voegen etc. Daarbij is dit hetzelfde geval voor de darkmode alleen daarbij gaat het meer om de afbeeldingen die niet overal meer zichtbaar zijn zoals op de afbeelding te zien is. Dat laatste is denk ik wel een belangrijk punt dat ik zou aanpassen als er meer tijd was geweest.
+ <img src="readme-images/v5_darkmode.png" width="375px" alt="Weergave van website in darkmode waarbij te zien is dat het logo in de header niet zichtbaar is">
+
 </details>
 
 
