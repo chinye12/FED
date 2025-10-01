@@ -1,6 +1,7 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+
 *,
 *::after,
 *::before {
@@ -10,11 +11,13 @@
   text-decoration: none;
   list-style-type: none;
   font-family: Helvetica, Arial, sans-serif;
+  color-scheme: dark light; /* Code voor dark mode goed laten aanpassen: https://www.youtube.com/watch?v=zFFuV_vXNhY */
 }
 
+
 a {
-  color: inherit;
-}
+  color: inherit; /* Code om blauwe kleur van links weg te halen: https://stackoverflow.com/questions/6722467/ */
+} 
 
 
 
@@ -24,33 +27,47 @@ a {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
   /* startje */
-  --color-text: #111;
-  --secondary-color-text: #eee;
-  --color-background: #eee;
-  --secondary-color-background: #111;
-  --third-color-background: #ffe196;
+  --color-text: rgb(17, 17, 17);
+  --secondary-color-text: rgb(238, 238, 238);
+  --color-background: rgb(238, 238, 238);
+  --secondary-color-background: rgb(17, 17, 17);
+  --third-color-background: rgb(255, 225, 150);
   --fourth-color-background: rgb(234, 226, 220);
-  --fifth-color-background: #f0f0f0;
+  --fifth-color-background: rgb(240, 240, 240);
   --light-accent-color: rgb(180, 179, 179);
   --dark-accent-color: rgb(72, 71, 71);
 }
 
-@media (prefers-color-schema: dark) {
+
+@media (prefers-color-scheme: dark) {
   :root {
-    --color-text: #eee;
-    --secondary-color-text: #111;
-    --color-backgound: #111;
-    --secondary-color-background: #eee;
-    --third-color-background: #001e69;
+    --color-text: rgb(238, 238, 238);
+    --secondary-color-text: rgb(17, 17, 17);
+    --color-background: rgb(17, 17, 17);
+    --secondary-color-background: rgb(238, 238, 238);
+    --third-color-background: rgb(41, 55, 132);
     --fourth-color-background: rgb(21, 29, 35);
-    --fifth-color-background: #0f0f0f;
+    --fifth-color-background: rgb(15, 15, 15);
     --light-accent-color: rgb(75, 76, 76);
     --dark-accent-color: rgb(183, 184, 184);
   }
 }
 
+
+.fallTheme {
+  --color-text: rgb(17, 17, 17);
+  --secondary-color-text: rgb(238, 238, 238);
+  --color-background: rgb(238, 238, 238);
+  --secondary-color-background: rgb(88, 51, 18);
+  --third-color-background: rgb(255, 174, 53);
+  --fourth-color-background: rgb(202, 141, 80);
+  --fifth-color-background: rgb(190, 172, 158);
+  --light-accent-color: rgb(138, 113, 75);
+  --dark-accent-color: rgb(70, 1, 1);
+}
 
 
 
@@ -60,9 +77,11 @@ a {
 /* HEADER */
 /****************/
 
+/* Stijling van banner in de header */
 #actie {
   background-color: var(--secondary-color-background);
   color: var(--secondary-color-text);
+  display: flex;
   justify-content: center;
   padding: 0.75em;
   font-size: 0.75em;
@@ -70,45 +89,87 @@ a {
   text-decoration: underline;
 }
 
+
 header svg {
   width: 1.5em;
 }
+
 
 header img {
   width: 10em;
   margin-right: 4em;
 }
 
-#hamburgerMenu {
-  position: fixed;
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+header ul {
+  display: flex;
+}
+
+
+header ul:nth-child(3) {
+  justify-content: space-around;
+  border-top: solid 0.1em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+header nav {
+  position: absolute;
+  top: 2em; /* Om banner zichtbaar te houden */
+  bottom: 0;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  transform: translateX(-100%); /* Zorgt ervoor dat het menu uit beeld is */
+  padding: 2em;
+} /* Code van Minke en nog zelf verder aangepast */
 
-  translate: -100% 0%;
+
+header nav ul {
+  flex-direction: column;
 }
 
-header > a:nth-child(1) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+header nav.active {
+  transform: translateX(0);
+  transition: ease-in-out 0.5s;
+  background-color: var(--color-background);
 }
 
-#secondNav ul {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 1em;
-  border-top: solid 0.05em;
-  border-color: var(--light-accent-color);
+
+header .active li {
+  font-size: 1.125em;
+  margin-bottom: 1em;
 }
 
-header > button {
-  background-color: inherit;
+
+header .active li:nth-child(5) {
+  margin-bottom: 2.5em;
+}
+
+
+header nav.active img {
+  width: 3em;
+  margin-top: 2em;
+}
+
+
+header button {
   border: none;
-  padding-left: 0.5em;
+  background-color: inherit;
 }
 
+
+header nav button {
+  margin-bottom: 2em;
+}
 
 
 
@@ -124,6 +185,7 @@ footer {
   padding-left: 2em;
 }
 
+
 footer h3 {
   font-size: 1.5em;
   font-weight: 400;
@@ -131,8 +193,8 @@ footer h3 {
   padding-bottom: 1em;
 }
 
+
 footer a {
-  color: var(--secondary-color-text);
   line-height: 2.8em;
 }
 
@@ -141,25 +203,30 @@ footer svg {
   margin-right: 0.4em;
 }
 
+
+/* Om svg iconen en tekst in een rij te positioneren. */
 .row {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
+
+
+.row a {
+  margin-right: 1em;
+}
+
 
 footer ul:first-child {
   margin-top: 2em;
 }
 
-.row a {
-  margin-right: 1em;
-}
 
 footer nav img {
   width: 4em;
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
 
 footer img:last-child {
   width: 20em;
@@ -171,25 +238,28 @@ footer img:last-child {
 
 
 
-
 /****************/
 /* MAIN */
 /****************/
 
 
-/* Achtergrondkleur */
+
+/* Achtergrondkleuren */
 
 #geleVlak {
   background-color: var(--third-color-background);
 }
 
+
 main section:last-of-type {
   background-color: var(--fourth-color-background);
 }
 
+
 .grijsVlak {
   background-color: var(--fifth-color-background);
 }
+
 
 
 
@@ -200,15 +270,16 @@ main section {
   padding-bottom: 2.5em;
 }
 
+
 main section:nth-child(3) img,
 video {
   border-bottom: solid;
 }
 
+
 .noWhiteSpace {
   padding-bottom: 0;
 }
-
 
 
 
@@ -220,11 +291,11 @@ video {
   padding-right: 1.25em;
 }
 
+
 .leftAligned {
   padding-left: 1.25em;
   padding-right: 1.25em;
 }
-
 
 
 
@@ -234,42 +305,51 @@ video {
   font-family: "Times New Roman", Times, serif;
 }
 
-main h1,
+
+.thinFont {
+  font-weight: 200;
+}
+
+
+.mediumSizeFont {
+  font-size: 2em;
+}
+
+
+.underline {
+  text-decoration: underline;
+}
+
+
+h1,
 h2 {
   font-weight: 400;
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
+
 p,
-.listType li {
+#listType li {
   font-size: 0.85em;
   line-height: 1.75em;
 }
+
 
 p {
   padding-bottom: 2.25em;
 }
 
-.thinFont {
-  font-weight: 200;
-}
-
-.mediumSizeFont {
-  font-size: 2em;
-}
-
-.underline {
-  text-decoration: underline;
-}
 
 #title {
   font-size: 2.7em;
 }
 
+
 #titleTwo {
   font-size: 2.1em;
 }
+
 
 main section:last-child h2 {
   padding-left: 1em;
@@ -278,29 +358,27 @@ main section:last-child h2 {
 
 
 
+/* Media */
 
-/* Afbeeldingen */
 main img {
   width: 100%;
 }
+
 
 main section img:nth-child(2) {
   width: 10em;
   margin-bottom: 1em;
 }
 
+
 .grijsVlak svg {
   width: 1em;
 }
 
 
-
-
-/* Video */
 video {
-  width: 100%;
+  width: 100%; /* Zodat het alle mogelijke ruimte inneemt op basis van het formaat */
 }
-
 
 
 
@@ -313,6 +391,7 @@ video {
   border-radius: 3em;
 }
 
+
 .linkStyle {
   padding-left: 2.5em;
   padding-right: 2.5em;
@@ -320,20 +399,21 @@ video {
   padding-bottom: 1em;
 }
 
+
 .buttonStyle {
   width: 12em;
-  border: none;
+  border: none; /* Om de automatische rand weg te halen */
   padding-left: 3em;
   padding-right: 3em;
   padding-top: 1.2em;
   padding-bottom: 1.2em;
 }
 
+
 .linkStyle:hover,
 .buttonStyle:hover {
   background-color: var(--dark-accent-color);
 }
-
 
 
 
@@ -346,6 +426,7 @@ form {
   margin-right: 2em;
 }
 
+
 form input {
   padding: 1em;
   border: solid 0.05em;
@@ -353,83 +434,61 @@ form input {
   border-radius: 0.5em;
 }
 
-/* Hoe checkbox selecteren om te stijlen? */
-/* code werk niet!! */
-input [type="checkbox"] {
-  transform: scale(1.5);
-  margin-right: 0.5em;
-}
 
 form label {
   font-size: 0.8em;
-}
-
-form label {
   color: var(--dark-accent-color);
-}
-
-div {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.5em;
 }
 
 
+.hidden {
+  display: none; /* Voor de invuldvelden die tevoorschijnkomen als er op de checkbox geklikt wordt*/
+}
 
 
-/* GRID */
+.hidden.active {
+  display: flex;
+  flex-direction: column;
+}
+
+
+form div {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+
+
+/* Grid afbeeldingen */
 
 #imgGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0em, 1fr));
+  grid-template-columns: repeat(2, minmax(0em, 1fr)); /* Met behulo van ChatGPT de juiste min gevonden prompt - Hoe zorg ik ervoor dat er twee rijen zijn? */
   grid-gap: 0.1em;
   border-top: solid;
-  margin: 0;
 }
+
 
 #imgGrid img {
-  display: block;
+  display: block; /* Zodat het alle plek inneemt van de container (figure) */
 }
 
+
 #imgGrid figure {
-  position: relative;
+  position: relative; /* Zorgt ervoor dat alles binnen het figuur normaal gepositioneerd is */
 }
+
 
 figcaption {
   color: var(--secondary-color-text);
   position: absolute;
+  left: 25%;
   bottom: 7%;
-  left: 50%;
-  transform: translateX(-50%);
 }
+/* A.d.v. code uit: https://www.youtube.com/watch?v=z-naBVXTi6g en behulp van ChatGPT prompt - Waarom is er nog witruimte onder de afbeeldingen en hoe krijg ik het weg? */
 
 
-
-
-/* CAROUSEL */
-
-#carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x;
-  scroll-behavior: smooth;
-  overscroll-behavior-x: contain;
-  gap: 1em;
-  margin-left: 2em;
-  margin-right: 2em;
-}
-
-#carousel img {
-  width: 13em;
-  margin-bottom: 1em;
-}
-
-#carousel p {
-  text-align: left;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
 
 /* SCHEMA */
 
@@ -442,48 +501,144 @@ figcaption {
   padding: 0.4em;
 }
 
+
 #schema li svg {
   margin: 0.5em;
 }
 
 
 
+/* Carousel */
+
+#carousel {
+  display: flex;
+  overflow-x: auto; /* Zorgt ervoor dat alles op de X-as binnen het formaat eindigen */
+  scroll-snap-type: x; /* Zorgt ervoor dat je niet op een random plek eindigt bij het scrollen maar bij een slide */
+  scroll-behavior: smooth; /* Zorgt er voor dat je niet perongeluk achteruit scrollt */
+  overscroll-behavior-x: contain; /* Zorgt ervoor dat scroll alleen binnen container plaatsvindt */
+  gap: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+
+#carousel img {
+  width: 13em;
+  margin-bottom: 1em;
+}
+
+
+#carousel p {
+  text-align: left;
+}
+
+
+::-webkit-scrollbar {
+  display: none; /* Code om scrollbar onzichtbaar te maken: https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+}
+
+
 
 /* Freq asked questions */
-.listType li {
-  list-style-type: disc;
-}
-
-.listType,
-summary {
-  padding-bottom: 1em;
-}
 
 details {
+  border-color: var(--light-accent-color);
   padding-left: 1em;
   padding-top: 1em;
   border-bottom: solid 0.05em;
-  border-color: var(--light-accent-color);
 }
+
 
 summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding-right: 2em;
 }
 
-.icon {
-  font-size: 1.5em;
-  margin-left: 1em;
-  margin-right: 1em;
+
+#listType li {
+  list-style-type: disc;
 }
 
-.icon::before {
-  content: "+";
-  display: block;
+
+#listType,
+summary {
+  padding-bottom: 1em;
 }
 
-.icon::after {
+
+summary::after {
+  content: "+"; /* Hoe je kunt stijlen met after: https://www.youtube.com/watch?v=dIUOWdwwZBw */
+  position: absolute;
+  bottom: 0;
+  left: 19em;
+  height: 2em;
+  width: 5%;
+}
+
+
+details[open] summary::after {
   content: "-";
-  display: block;
+} /* ChatGPT prompt - Hoe kan ik de content aan te passen als de details zijn uitgeklapt? */ 
+
+
+
+/* Laadscherm */
+
+#loadingScreen {
+  background-color: var(--third-color-background);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+/* Code voor het maken van het laadscherm: https://www.youtube.com/watch?v=Yf5d_Zx3AaI */
+
+
+#loader {
+  border: 1em solid var(--light-accent-color);
+  border-top: 1em solid var(--dark-accent-color);
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Code voor het maken van de loader en het laten draaien ervan: https://www.w3schools.com/howto/howto_css_loader.asp */
+
+
+
+/* Herfst thema */
+
+#themeSwitch {
+  display: flex;
+}
+
+
+#themeSwitch svg:last-child {
+  display: none;
+}
+
+
+.fallTheme #themeSwitch svg:first-child {
+  display: none;
+}
+
+
+.fallTheme #themeSwitch svg:last-child {
+  display: block;
+} /* Code van: https://www.youtube.com/watch?v=zFFuV_vXNhY */

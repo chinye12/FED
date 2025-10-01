@@ -11,153 +11,203 @@
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" >
   </head>
   <body>
+    <div id="loadingScreen">
+      <div id="loader"></div>
+    </div>
     <header>
       <a id="actie" href="#">Bespaar 50% op elke extra bril</a>
-      <button id="openMenuButton">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <!-- Icon from Meteor Icons by zkreations - https://github.com/zkreations/icons/blob/main/LICENSE -->
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M3 6h18M3 12h18M3 18h18"
-          />
-        </svg>
-      </button>
-      <a href="#">
-        <img
-          src="images/algemeen/aceandtate_logo.jpeg"
-          alt="Ace and tate logo in zwart"
-        >
-      </a>
-      <nav id="hamburgerMenu">
-        <button id="closeMenuButton">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <ul>
-          <li><a href="#">Brillen</a></li>
-          <li><a href="#">Zonnebrillen</a></li>
-          <li><a href="#">Accessoires</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Oogzorg</a></li>
-          <li><a href="#">Gratis oogmeting</a></li>
-          <li><a href="#">Winkels</a></li>
-          <li><a href="#">Mijn account</a></li>
-          <li><a href="#">Contact opnemen</a></li>
-          <li>
-            <a href="#"
-              ><img src="images/algemeen/logo_and.svg" alt="En teken in zwart"
-            ></a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m21 21l-6-6m2-5a7 7 0 1 1-14 0a7 7 0 0 1 14 0"
-          />
-        </svg>
-      </a>
-      <a href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0"
-          />
-        </svg>
-      </a>
-      <a href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M16 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-4 7a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7"
-          />
-        </svg>
-      </a>
-      <a href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4z"
-          />
-        </svg>
-      </a>
-      <nav id="secondNav">
+      <div>
+        <div>
+          <button aria-label="Menu"> <!-- Plaatsing van aria-label https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <!-- Icon from Meteor Icons by zkreations - https://github.com/zkreations/icons/blob/main/LICENSE -->
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 6h18M3 12h18M3 18h18"
+              />
+            </svg>
+          </button>
+          <nav>
+            <button aria-label="Menu sluiten">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <ul>
+              <li><a href="#">Brillen</a></li>
+              <li><a href="#">Zonnebrillen</a></li>
+              <li><a href="#">Accessoires</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Oogzorg</a></li>
+              <li class="thinFont"><a href="#">Gratis oogmeting</a></li>
+              <li class="thinFont"><a href="#">Winkels</a></li>
+              <li class="thinFont"><a href="#">Mijn account</a></li>
+              <li class="thinFont"><a href="#">Contact opnemen</a></li>
+              <li>
+                <a href="#">
+                  <img
+                    src="images/algemeen/logo_and.svg"
+                    alt="En teken in zwart"
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#">
+            <img
+              src="images/algemeen/aceandtate_logo.jpeg"
+              alt="Ace and tate logo in zwart"
+            >
+          </a>
+        </div>
         <ul>
           <li>
-            <a href="#">Brillen</a>
+            <a href="#" aria-label="Zoek">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m21 21l-6-6m2-5a7 7 0 1 1-14 0a7 7 0 0 1 14 0"
+                />
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="#">Zonnebrillen</a>
+            <a href="#" aria-label="Wishlist">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0"
+                />
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="#">Winkels</a>
+            <a href="#" aria-label="Mijn profiel">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-4 7a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Winkelwagen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from HeroIcons v1 Outline by Refactoring UI Inc - https://github.com/tailwindlabs/heroicons/blob/master/LICENSE -->
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <button id="themeSwitch" aria-label="Thema">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 64 64"
+              >
+                <!-- Icon from Emoji One (Monotone) by Emoji One - https://creativecommons.org/licenses/by/4.0/ -->
+                <path
+                  fill="currentColor"
+                  d="m9.925 31.582l12.877 7.887l4.783-4.572l-12.181-18.979l12.941 18.25l7.918-7.566l-7.79-17.027l8.579 16.273l7.42-7.094l.674-12.877l.363 11.887L61.963 2.038S24.877.682 11.425 14.134c-.238.236-.441.463-.668.695c1.982 1.269 3.277 3.336 3.277 5.678c0 3.863-3.512 6.992-7.842 6.992a8.6 8.6 0 0 1-3.582-.777c-3.576 11.135 9.511 15.02 14.398 18.284l5.049-4.826z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M61.242 19.711c1.006-9.802.721-17.673.721-17.673L46.236 18.489l11.887.361l-12.881.675l-7.092 7.424l16.271 8.574l-17.027-7.789l-7.567 7.918L48.081 48.59L29.099 36.412l-4.572 4.782l7.889 12.876l-8.598-12.133l-4.825 5.047c4.271 6.4 9.606 26.852 30.873 5.587c4.135-4.136 6.867-10.504 8.674-17.342c-1.281-1.077-2.037-2.44-1.998-3.907c.014-.467.113-.92.277-1.352c-1.869-1.147-3.031-2.803-2.982-4.613c.077-2.92 3.268-5.254 7.405-5.646M17.009 45.006L9.63 52.058l2.307 2.306l7.056-7.379c-.295-.441-.585-.817-.874-1.106s-.669-.579-1.11-.873"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                <path
+                  fill="currentColor"
+                  d="M12 14q-.825 0-1.412-.587T10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14m0 7q-3.475 0-6.025-2.287T3.05 13H5.1q.35 2.6 2.313 4.3T12 19q2.925 0 4.963-2.037T19 12t-2.037-4.962T12 5q-1.725 0-3.225.8T6.25 8H9v2H3V4h2v2.35q1.275-1.6 3.113-2.475T12 3q1.875 0 3.513.713t2.85 1.924t1.925 2.85T21 12t-.712 3.513t-1.925 2.85t-2.85 1.925T12 21"
+                />
+              </svg>
+            </button>
           </li>
         </ul>
-      </nav>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Brillen</a>
+        </li>
+        <li>
+          <a href="#">Zonnebrillen</a>
+        </li>
+        <li>
+          <a href="#">Winkels</a>
+        </li>
+      </ul>
     </header>
     <main>
       <section class="centered">
@@ -194,7 +244,7 @@
       <section>
         <img
           src="images/ons_verhaal/onze_winkels.jpeg"
-          alt="Brillendisplay op één van de locaties"
+          alt="Brillen display op één van de locaties"
         >
         <div class="leftAligned">
           <h2 class="mediumSizeFont">Onze winkels</h2>
@@ -208,9 +258,9 @@
         </div>
       </section>
       <section class="noWhiteSpace">
-        <h2 class="secondFont centered">You make us look good</h2>
+        <h2 class="secondFont centered">You make us look good</h2> <!-- Het schrijven van twee classes: https://www.w3schools.com/html/html_classes.asp -->
         <div id="imgGrid">
-          <figure>
+          <figure> <!-- Hoe figure en figcaption gebruikt kunnen worden: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption -->
             <img
               src="images/ons_verhaal/yin_stagram.jpg"
               alt="Jonge vrouw met haar tot haar schouders, die staat voor een grijze stenen muur en een grote zonnebril op heeft."
@@ -244,15 +294,31 @@
         <h2 class="secondFont leftAligned mediumSizeFont">
           Meld je aan voor onze nieuwsbrief voor de laatste Ace & Tate updates.
         </h2>
-        <form>
-          <input type="text" placeholder="Enter your emailadress" >
+        <form> <!-- Voor het opstellen van het formulier de volgende bron gebruikt: https://www.w3schools.com/tags/tag_label.asp  -->
+          <input type="email" placeholder="Enter your emailadress" >
           <div>
-            <input type="checkbox" id="checkbox">
+            <input type="checkbox" id="checkbox" >
             <label class="thinFont" for="checkbox"
               >Ik geef toestemming voor de verwerking van mijn persoonlijke
               gegevens en heb het
               <a class="underline" href="#">privacybeleid</a> gelezen*</label
             >
+          </div>
+          <div class="hidden">
+            <label class="thinFont" for="checkbox"
+              >Shop voorkeuren (optioneel)</label
+            >
+            <input
+              class="thinFont"
+              type="text"
+              placeholder="Selecteer jouw voorkeur"
+            >
+          </div>
+          <div class="hidden">
+            <label class="thinFont" for="checkbox"
+              >Geboortedatum (optioneel)</label
+            >
+            <input class="thinFont" type="text" placeholder="DD-MM-YYYY" >
           </div>
           <button class="buttonStyle">meld je aan</button>
         </form>
@@ -264,7 +330,7 @@
         <li>Ma - Vr, 9:00 - 17:00</li>
         <li>
           <a class="row" href="#">
-            <svg
+            <svg aria-label="Whatsapp icoon"
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
@@ -323,7 +389,7 @@
           </li>
         </ul>
         <div class="row">
-          <svg
+          <svg aria-label="Locatie icoon"
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"

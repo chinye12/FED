@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   blauw (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  responsive (kies uit responsive óf surface plane)
+  Surface plane (kies uit responsive óf surface plane)
  
 </details>
 
@@ -66,7 +66,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 6. Het lijkt erop dat het niet mogelijk is om links te skippen.
 7. Er is geen dark of light mode.
 8. Het lijkt erop dat je tekst niet kunt vergroten, je alleen inzoomen op de pagina.
-9. Contrast?
+
+ <img src="readme-images/wcag_checklist1.png" width="375px" alt="WCAG checklist ingevuld pagina 1">
+<img src="readme-images/wcag_checklist2.png" width="375px" alt="WCAG checklist ingevuld pagina 2">
+<img src="readme-images/wcag_checklist3.png" width="375px" alt="WCAG checklist ingevuld pagina 3">
+<img src="readme-images/wcag_checklist4.png" width="375px" alt="WCAG checklist ingevuld pagina 4">
+<img src="readme-images/wcag_checklist5.png" width="375px" alt="WCAG checklist ingevuld pagina 5">
+
 </details>
 
 
@@ -202,9 +208,8 @@ Mijn vragen/problemen
 8. Moeten alle kleuren in de root of alleen de meest gebruikte? Fonts?
 9. Zijn alt teksten nodig voor svg's? 
 
-</details>
-
-1. Even kijken naar de code voor het hamburger menu als voorbeeld staat. Summary details gaat niet mogelijk zijn. !
+Antwoorden:
+1. Even kijken naar de code voor het hamburger menu als voorbeeld staat. Summary details gaat niet mogelijk zijn. 
 2. Dit komt doordat bijv. img een / voor het haakje heeft staan, dit mag verwijderd worden en dan zal de melding ook niet meer voorkomen. (Done)
 3.Inmiddels gelukt door de img te selecteren binnen de class. (Done)
 4. Je kunt niet alles stijlen van een checkbox. Transform scale (2) kan als oplossing. !lukt niet
@@ -229,6 +234,8 @@ Surface plane toevoegingen:
 2. Video niet op autoloop maar met button etc.
 3. Dark mode uitgebreider uitvoeren.
 4. ::after toepasssen voor Frequented asked questions uitklapgedeelte. 
+</details>
+
 
 
 ## Toegankelijkheidstest 2/2 (week 4)
@@ -254,10 +261,15 @@ Surface plane toevoegingen:
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 Goed
+1. Het toevoegen van classes voor stijling die meerdere keren maar onregelmatig voorkomt. Ik heb hierdoor gemerkt dat de details van mijn website meer lijken op die van ace & tate en dat het makkelijker is om overzicht te behouden aangezien ik niet hoef na te denken over wat elke nth-child/type is. 
 
+<img src="readme-images/v3_websitevergelijking.png" width="375px" alt="Weergave van mijn website naast die van Ace and tate">
+
+2. Voor de footer heb ik de sections weggehaald en merkte ik dat ik die eigenlijk inderdaad niet nodig had en overbodige secties had geschreven in eerste instantie. 
 
 
 Lastig
+1. Het laten werken van het hamburgermenu. Ik heb de code uit het voorbeeld gebruikt maar ik krijg in de browser de melding dat area-label = "hidden" niet gebruikt mag worden omdat het niet door screenreaders opgepakt zal worden. Ik heb dat weggehaald en door middel van id's variabele proberen te maken de buttons maar dat werkt niet. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -276,6 +288,16 @@ Lastig
   - punt 2
   - nog een punt
   - ...
+
+  Mijn vragen/problem:
+  1. Punt 1 bij wat ik lastig vind.
+  2. Hoe kun je darkmode nakijken? Als ik dat nu doe dan passen sommige kleuren zich aan maar andere niet.
+  3. Ik heb geprobeerd om de checkbox te stijlen maar dat lukt nog steeds niet. Weten jullie hier een andere oplossing voor?
+
+  Antwoorden:
+  1. Je hebt niet twee buttons nodig met css en javascript kan de afbeelding aangepast worden. Javascript was blijkbaar ook niet goed gelinkd, code klopt wel maar het advies is om header gedeeltes in div's te zetten i.p.v. id's voor de ul's te maken. Als dat gedaan is kijken of het werkt.
+  2. Bij instellingen aanpassen wordt goed gedaan. Kijk of het gebruiken van alleen hex of rgb verschil maakt. 
+  3. Vergeten te vragen.
 
 </details>
 
@@ -318,14 +340,21 @@ Lastig
   Nb. Vermeld de bronnen ook in je code.
 
   1. HTML uitleg formulier opstellen https://www.w3schools.com/tags/tag_label.asp 
-  2. HTML uitleg formulier - input tag https://www.w3schools.com/tags/att_input_placeholder.asp
-  3. HTML uitleg figure caption https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption
-  4. HTML uitleg svg opslaan Ivo 
-  5. HTML uitleg details and summary https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
-  6. HTML Twee classes voor 1 tag kan https://www.w3schools.com/html/html_classes.asp
-  7. CSS instructie tekst positioneren op afbeelding https://www.youtube.com/watch?v=z-naBVXTi6g
-  8. CSS code voor weghalen van blauwe kleur van links https://stackoverflow.com/questions/6722467/how-do-i-remove-the-default-link-color-of-the-html-hyperlink-a-tag
-  9. CSS scrollbar onzichtbaar maken https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
-
+  2. HTML uitleg figure caption https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption
+  3. HTML uitleg details and summary https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+  4. HTML Twee classes voor 1 tag kan https://www.w3schools.com/html/html_classes.asp
+  5. CSS code voor weghalen van blauwe kleur van links https://stackoverflow.com/questions/6722467/how-do-i-remove-the-default-link-color-of-the-html-hyperlink-a-tag
+  6. CSS instructie tekst positioneren op afbeelding https://www.youtube.com/watch?v=z-naBVXTi6g 
+  7. CSS scrollbar onzichtbaar maken https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+  8. JS uitleg setInterval https://www.w3schools.com/jsref/met_win_setinterval.asp
+  9. JS uitleg audio toevoegen bij click op button https://dev.to/shantanu_jana/how-to-play-sound-on-button-click-in-javascript-3m48
+  10. CSS uitleg ::after https://www.youtube.com/watch?v=dIUOWdwwZBw
+  11. CSS load animatie maken https://www.w3schools.com/howto/howto_css_loader.asp
+  12. CSS en JS loading page instructie https://www.youtube.com/watch?v=Yf5d_Zx3AaI
+  13. CSS dark light scheme uitleg https://www.youtube.com/watch?v=zFFuV_vXNhY
+  14. HTML aria-label uitleg https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label
+  15. Ivo heeft uitgelegd hoe ik svg's kan opslaan (door te inspecteren), gewezen op het gebruik van placeholders en summary and details.
+  16. Minke voor hulp met het hamburgermenu 
+  17. ChatGPT (in code aangegeven waarvoor)
 
 </details>
